@@ -1,0 +1,38 @@
+<div class="row">
+  <div>
+    <div class="card mt-4">
+      <div class="card-body">
+        <h2>Automatic Irrigation System</h2>
+        <div class="row">
+          <div class="col-12 mt-4 ml-3">
+            <h3>Plots</h3>
+            <table class="table">
+              <thead class="thead-light">
+                  <tr>
+                      <th scope="col"></th>
+                      <th scope="col">plot Id</th>
+                      <th scope="col">plot Location</th>
+                      <th scope="col">plot Area by m2</th>
+                      <th scope="col">owner name</th>
+                      <th scope="col">last Irragtion Date</th>
+                      <th scope="col">next Irragtion Date</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let plot of plots">
+                      <th scope="plot"> </th>
+                      <td><a href="javascript: void(0);" (click)="openPlotDetails(plot.id)">{{ plot.id }}</a></td>
+                      <td>{{ plot.location }}</td>
+                      <td>{{ plot.area }}</td>
+                      <td>{{ plot.ownerName }}</td>
+                      <td>{{ plot.lastIrragtionDate }}</td>
+                      <td>{{ plot.nextIrragtionDate }}</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
