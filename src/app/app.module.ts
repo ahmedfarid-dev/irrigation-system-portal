@@ -5,7 +5,6 @@ import { CoreModule } from './core/core.module';
 import { LayoutModule } from './views/layout/layout.module';
 import { NgModule } from '@angular/core';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [

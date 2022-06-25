@@ -2,7 +2,11 @@
   <div>
     <div class="card mt-4">
       <div class="card-body">
-        <h2>Automatic Irrigation System</h2>
+        <div class="head">
+          <h2>Automatic Irrigation System</h2>
+          <button type="button" class="irrigation-system-button" 
+          (click)="addPlot()">Add Plot</button>
+        </div>
         <div class="row">
           <div class="col-12 mt-4 ml-3">
             <h3>Plots</h3>
@@ -21,12 +25,16 @@
               <tbody>
                   <tr *ngFor="let plot of plots">
                       <th scope="plot"> </th>
-                      <td><a href="javascript: void(0);" (click)="openPlotDetails(plot.id)">{{ plot.id }}</a></td>
+                      <td><a href="javascript: void(0);" (click)="openPlotDetails(plot)">{{ plot.id }}</a></td>
                       <td>{{ plot.location }}</td>
                       <td>{{ plot.area }}</td>
                       <td>{{ plot.ownerName }}</td>
-                      <td>{{ plot.lastIrragtionDate }}</td>
-                      <td>{{ plot.nextIrragtionDate }}</td>
+                      <td>
+                        {{ plot?.lastIrragtionDate?.split('T')[0]}} {{plot?.lastIrragtionDate?.split('T')[1].split('.')[0]}}
+                      </td>
+                      <td>
+                        {{ plot?.nextIrragtionDate?.split('T')[0]}} {{plot?.nextIrragtionDate?.split('T')[1].split('.')[0]}}
+                      </td>
                   </tr>
               </tbody>
             </table>

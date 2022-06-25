@@ -1,6 +1,10 @@
-# CurrencyExchanger
+# Irrigation System Portal
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+
+
+# Back-end application : https://github.com/ahmedfarid-dev/Automatic-Irrigation-System
+
 
 ## Development server
 
